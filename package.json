@@ -5,7 +5,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "sync:maps": "node scripts/sync-maps.mjs",
+    "prebuild": "node scripts/sync-maps.mjs",
     "build": "vue-tsc -b && vite build",
+    "build:offline": "node scripts/sync-maps.mjs --skip-pull && vue-tsc -b && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
