@@ -106,7 +106,7 @@ const mirrors = [
         <p>
           地图数据来自网络整理，基于
           <a
-            href="https://github.com/LorienYang/china-bandori-maps"
+            href="https://github.com/HELPMEEADICE/china-bandori-maps"
             target="_blank"
             rel="noopener noreferrer"
             class="text-stone-200 underline decoration-white/25 underline-offset-4 transition hover:text-white hover:decoration-white/70"
