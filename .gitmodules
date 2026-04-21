@@ -1,9 +1,0 @@
-[submodule "public/maps/PJSK"]
-	path = public/maps/PJSK
-	url = https://github.com/LorienYang/china-pjsk-maps.git
-[submodule "public/maps/Bang_Dream"]
-	path = public/maps/Bang_Dream
-	url = https://github.com/LorienYang/china-bandori-maps.git
-[submodule "public/maps/LoveLive"]
-	path = public/maps/LoveLive
-	url = https://github.com/LorienYang/china-lovelive-maps.git
