@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>全国拉群地图 - LoveLive! 同好群聊导航</title>
+    <meta
+      name="description"
+      content="全国拉群地图聚合展示 LoveLive! 全国各省及海外地区群聊信息，支持地图选省、全局搜索、群号复制与快速查找同好组织。"
+    />
+    <meta
+      name="keywords"
+      content="全国拉群地图,LoveLive,lovelive,拉群,QQ群,地图导航,同好社群,省份群聊,海外群聊"
+    />
+    <meta name="author" content="全国拉群地图" />
+    <meta name="robots" content="index,follow,max-image-preview:large" />
+    <meta name="theme-color" content="#f6a623" />
+    <meta name="theme-color" content="#f6a623" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#2b1a05" media="(prefers-color-scheme: dark)" />
+    <meta name="format-detection" content="telephone=no,email=no,address=no" />
+    <link rel="canonical" href="https://mapapi.enldm.cyou/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:site_name" content="全国拉群地图" />
+    <meta property="og:title" content="全国拉群地图 - LoveLive! 同好群聊导航" />
+    <meta
+      property="og:description"
+      content="聚合全国各省及海外地区 LoveLive! 群聊信息，支持地图查看、搜索筛选与一键复制群号。"
+    />
+    <meta property="og:url" content="https://mapapi.enldm.cyou/" />
+    <meta property="og:image" content="https://mapapi.enldm.cyou/Love_Live.svg" />
+    <meta property="og:image:alt" content="全国拉群地图 LoveLive! 标识" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="全国拉群地图 - LoveLive! 同好群聊导航" />
+    <meta
+      name="twitter:description"
+      content="查看全国与海外 LoveLive! 拉群分布，支持省份浏览、全局搜索和快速复制群号。"
+    />
+    <meta name="twitter:image" content="https://mapapi.enldm.cyou/Love_Live.svg" />
+    <link rel="preload" href="./styles.css" as="style" />
+    <link rel="preload" href="./Love_Live.svg" as="image" fetchpriority="high" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "全国拉群地图",
+        "alternateName": "LoveLive! 同好群聊导航",
+        "url": "https://mapapi.enldm.cyou/",
+        "description": "聚合展示全国各省及海外地区 LoveLive! 群聊信息，支持地图缩放、分省查看、全局搜索与一键复制群号。",
+        "inLanguage": "zh-CN",
+        "keywords": [
+          "全国拉群地图",
+          "LoveLive!",
+          "lovelive",
+          "拉群",
+          "QQ群",
+          "地图导航",
+          "同好社群"
+        ],
+        "publisher": {
+          "@type": "Organization",
+          "name": "全国拉群地图"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": "https://mapapi.enldm.cyou/?q={search_term_string}",
+          "query-input": "required name=search_term_string"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <header class="seo-header" aria-label="页面标题">
+      <h1>全国拉群地图</h1>
+      <p>
+        提供 LoveLive! 全国各省及海外地区群聊信息导航，帮助同好快速查找可加入的社群组织。
+      </p>
+    </header>
+
+    <main id="map" role="main">
+      <svg id="mapSvg"></svg>
+      <section id="introCard" class="md3-card" aria-label="地图介绍">
+        <button id="introCloseBtn" class="intro-action-btn" type="button" aria-label="收起介绍">收起</button>
+        <button id="introExpandBtn" class="intro-expand-btn" type="button" aria-label="展开介绍">简介</button>
+        <h2 id="introTitle" class="card-title">全国拉群地图</h2>
+        <img
+          id="introLogo"
+          src="./Love_Live.svg"
+          alt="LoveLive! Logo"
+          width="640"
+          height="196"
+          fetchpriority="high"
+          decoding="async"
+        />
+        <p class="card-body">
+          本网站用于聚合展示全国各省及海外地区的 LoveLive! 群聊信息，支持地图缩放、拖拽、分省查看、国外切换与一键复制群号，帮助同好快速找到组织。
+        </p>
+        <br>
+        <p class="card-body">
+          你当前访问的为镜像站，此镜像由 <a href="https://github.com/LorienYang">Lorien Yang </a>提供。皆在为大家提供更好的可访问性。
+        </p>
+        <br>
+        <p class="card-body">
+         API 来自 EnlDM，基于 CC-BY 4.0 发布
+        </p>
+        <p class="card-body gpl-text">
+          本软件以 GPLv3 进行开源
+        </p>
+        <label class="md3-switch" for="invertCtrlSwitch">
+          <input id="invertCtrlSwitch" type="checkbox" />
+          <span class="md3-switch-track"><span class="md3-switch-thumb"></span></span>
+          <span id="invertCtrlLabel" class="md3-switch-label">反转操作（默认关）</span>
+        </label>
+        <label class="md3-switch" for="themeSwitch">
+          <input id="themeSwitch" type="checkbox" />
+          <span class="md3-switch-track"><span class="md3-switch-thumb"></span></span>
+          <span id="themeSwitchLabel" class="md3-switch-label">暗黑模式（跟随系统）</span>
+        </label>
+
+        <div class="intro-links">
+          <a
+            class="github-link"
+            href="https://github.com/HELPMEEADICE/china-lovelive-maps"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub 开源地址"
+          >
+            <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub" />
+            <span>开源仓库（求求了给个Star吧😭）</span>
+          </a>
+
+          <button
+            id="feedbackModalBtn"
+            class="feedback-link"
+            type="button"
+            aria-label="反馈与杂谈群"
+          >
+            反馈与杂谈群（宣）：1046229865
+          </button>
+        </div>
+
+        <img
+          id="introCounter"
+          src="https://count.getloli.com/get/@HELPMEEADICE-LoveLive-Web"
+          alt="访问计数器"
+        />
+      </section>
+
+      <section id="selectedCard" class="md3-card" aria-label="已选择省份">
+        <h2 id="selectedTitle" class="card-title">全国拉群数据</h2>
+        <p id="selectedProvince" class="card-value">加载中...</p>
+        <p id="selectedMeta" class="card-body">正在获取最新数据</p>
+        <div id="listTools" class="list-tools">
+          <div class="search-row">
+            <button id="globalSearchBtn" class="search-mode-btn" type="button" aria-label="全局搜索开关" title="切换全局搜索">
+              <span class="search-icon">⌕</span>
+              <span class="search-label">全局搜索</span>
+            </button>
+            <input id="searchInput" class="md3-input" type="search" placeholder="搜索群名 / 群号" />
+          </div>
+          <div class="tool-row">
+            <label class="tool-label" for="typeFilter">类型</label>
+            <select id="typeFilter" class="md3-select">
+              <option value="all">全部</option>
+              <option value="region">地区</option>
+              <option value="school">校群</option>
+              <option value="other">其他</option>
+            </select>
+          </div>
+          <div id="sortBar" class="sort-bar" aria-label="排序方式">
+            <button class="sort-btn active" type="button" data-sort="default">默认</button>
+            <button class="sort-btn" type="button" data-sort="time_desc">认证时间 ↓</button>
+            <button class="sort-btn" type="button" data-sort="name_asc">首字母 A→Z</button>
+            <button class="sort-btn" type="button" data-sort="type_asc">类型 A→Z</button>
+          </div>
+        </div>
+        <div id="groupList" class="group-list"></div>
+      </section>
+
+      <button id="overseasToggleBtn" class="md3-btn md3-btn-tonal side-toggle-btn" type="button">国外</button>
+      <button id="nonRegionalToggleBtn" class="md3-btn md3-btn-tonal side-toggle-btn secondary-toggle-btn" type="button">非地区</button>
+      <div id="mobileSheetHandle" class="mobile-sheet-handle" aria-hidden="true">
+        <span class="mobile-sheet-bar"></span>
+      </div>
+
+      <section id="controlCard" class="md3-card" aria-label="地图控件">
+        <h2 class="card-title">地图控件</h2>
+        <div class="control-row">
+          <button id="zoomInBtn" class="md3-btn" type="button">放大</button>
+          <button id="zoomOutBtn" class="md3-btn" type="button">缩小</button>
+          <button id="resetViewBtn" class="md3-btn md3-btn-tonal" type="button">重置</button>
+        </div>
+      </section>
+
+      <div id="badgeBubble" class="map-bubble" aria-live="polite"></div>
+
+      <div id="feedbackModal" class="feedback-modal" aria-hidden="true">
+        <div class="feedback-modal-card" role="dialog" aria-modal="true" aria-label="反馈群二维码">
+          <button id="feedbackModalClose" class="feedback-modal-close" type="button" aria-label="关闭">×</button>
+          <img src="./qrcode.webp" alt="反馈群二维码" class="feedback-modal-image" />
+          <a
+            href="https://qm.qq.com/q/j1lqVJcjNC"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="feedback-modal-link"
+          >
+            前往加群链接
+          </a>
+        </div>
+      </div>
+
+      <button id="refreshApiBtn" class="context-refresh-btn" type="button">刷新数据</button>
+
+      <div id="tooltip"></div>
+    </main>
+
+    <footer id="siteFooter">
+      <a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank" rel="noopener noreferrer">浙ICP备2025171659号-2</a>
+    </footer>
+
+    <script defer src="https://cdn.jsdmirror.com/npm/d3@7.9.0/dist/d3.min.js"></script>
+    <script defer src="./china.min.js"></script>
+    <script defer src="./app.js"></script>
+    <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "a43e2fcca6054147a281ad661ef5060a"}'></script>
+  </body>
+</html>

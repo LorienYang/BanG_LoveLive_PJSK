@@ -1,0 +1,140 @@
+{
+    "events": [
+        {
+            "event": "BanG Dream! Special LIVE in TAIPEI",
+            "date": "2026-4-11",
+            "raw_text": "大佳河濱公園",
+            "project": "bandori",
+            "image": "BanG_Dream_Special_LIVE_in_TAIPEI.webp",
+            "offical": 1
+        },
+        {
+            "event": "Ave Mujica LIVE TOUR 2026「Exitus」-FINAL-",
+            "date": "2026-4-17",
+            "raw_text": "SGC HALL ARIAKE",
+            "project": "bandori",
+            "image": "Ave_Mujica_LIVE_TOUR_2026.webp",
+            "offical": 1
+        },
+        {
+            "event": "Poppin'Party×Roselia 合同ライブ「DREAMS GO ON」",
+            "date": "2026-5-3",
+            "raw_text": "有明アリーナ",
+            "project": "bandori",
+            "image": "PoppinPartyRoselia.webp",
+            "offical": 1
+        },
+        {
+            "event": "RAISE A SUILEN LIVE 2026「Boot IGNITION」東京公演",
+            "date": "2026-6-18",
+            "raw_text": "SGC HALL ARIAKE",
+            "project": "bandori",
+            "image": "RAS2026.webp",
+            "offical": 1
+        },
+        {
+            "event": "RAISE A SUILEN LIVE 2026「Boot IGNITION」兵庫公演",
+            "date": "2026-6-26",
+            "raw_text": "神戸国際会館こくさいホール",
+            "project": "bandori",
+            "image": "RAS2026.webp",
+            "offical": 1
+        },
+        {
+            "event": "夢限大みゅーたいぷ 47都道府県制覇の旅「スーパーポジション 〜スピンアップ編〜」　東京公演",
+            "date": "2026-6-21",
+            "raw_text": "SGC HALL ARIAKE",
+            "project": "bandori",
+            "image": "Mewtype.webp",
+            "offical": 1
+        },
+        {
+            "event": "MyGO!!!!! 9th LIVE",
+            "date": "2026-7-18",
+            "raw_text": "ぴあアリーナMM",
+            "project": "bandori",
+            "image": "MyGO.webp",
+            "offical": 1
+        },
+        {
+            "event": "Roselia 10th Anniversary Best Album「Lehre der Rose」",
+            "date": "2026-8-29",
+            "raw_text": "有明Arena",
+            "project": "bandori",
+            "image": "R10th.webp",
+            "offical": 1
+        },
+        {
+            "event": "Morfonica単独ライブ",
+            "date": "2026-9-22",
+            "raw_text": "TACHIKAWA STAGE GARDEN",
+            "project": "bandori",
+            "image": "Morfonica.webp",
+            "offical": 1
+        },
+        {
+            "event": "太原 BanG Dream! Only 1st",
+            "date": "2026-4-20",
+            "raw_text": "山西太原",
+            "project": "bandori",
+            "image": "",
+            "offical": 0
+        },
+        {
+            "event": "四川BanGDream! ONLY Live 3.5",
+            "date": "2026-5-4",
+            "raw_text": "四川成都",
+            "project": "bandori",
+            "image": "",
+            "offical": 0
+        },
+        {
+            "event": "5.1「重庆」BanG Dream! Only live",
+            "date": "2026-5-1",
+            "raw_text": "重庆市大渡口区文体路89号壹街购物中心B区一楼",
+            "project": "bandori",
+            "image": "",
+            "offical": 0
+        },
+        {
+            "event": "徽京对邦 BanGDream Only",
+            "date": "2026-5-23",
+            "raw_text": "安徽合肥",
+            "project": "bandori",
+            "image": "",
+            "offical": 0
+        },
+        {
+            "event": "重庆BanG Dream! only",
+            "date": "2026-5-3",
+            "raw_text": "重庆市两江新区",
+            "project": "bandori",
+            "image": "",
+            "offical": 0
+        },
+        {
+            "event": "BanG Dream! ONLY 中珠对邦一周年纪念",
+            "date": "2026-5-3",
+            "raw_text": "中山 SUNLIVE",
+            "project": "bandori",
+            "image": "",
+            "offical": 0
+        },
+        {
+            "event": "Xiamen BanG Dream! Only 2nd",
+            "date": "2026-6-19",
+            "raw_text": "厦门市湖里区Ovogo旺来现场（厦门华美空间店）",
+            "project": "bandori",
+            "image": "",
+            "offical": 0
+        },
+        {
+            "event": "川内高校联合对邦",
+            "date": "2026-5-1",
+            "raw_text": "四川省成都市天府广场行歌live",
+            "project": "bandori",
+            "image": "",
+            "offical": 0
+        }
+    ]
+}
