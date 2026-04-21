@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans:
+    "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+    "Noto Sans CJK SC", sans-serif;
+}
+
+:root {
+  color: #e2e8f0;
+  background:
+    radial-gradient(circle at top, rgba(56, 189, 248, 0.14), transparent 28%),
+    radial-gradient(circle at 80% 18%, rgba(244, 114, 182, 0.18), transparent 24%),
+    linear-gradient(180deg, #08111f 0%, #0f172a 45%, #020617 100%);
+  color-scheme: dark;
+  font-family: var(--font-sans);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#app {
+  min-height: 100%;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
